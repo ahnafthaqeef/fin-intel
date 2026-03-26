@@ -22,6 +22,26 @@ const tools = [
     accent: "from-violet-600 to-violet-500",
   },
   {
+    href: "/credit-explainer",
+    icon: "📋",
+    title: "Credit Report Explainer",
+    description:
+      "Upload a credit report PDF. AI translates it into plain English — health score, positives, concerns, and recommended actions.",
+    tags: ["Credit Intelligence", "PDF Parsing", "LLM"],
+    cta: "Explain Report →",
+    accent: "from-emerald-600 to-emerald-500",
+  },
+  {
+    href: "/fraud-brief",
+    icon: "🛡️",
+    title: "Fraud Signal Brief",
+    description:
+      "Input fraud signals for a credit application. AI synthesises them into a structured analyst brief with risk level and recommended actions.",
+    tags: ["Fraud Detection", "Risk Analysis", "LLM"],
+    cta: "Generate Brief →",
+    accent: "from-red-600 to-red-500",
+  },
+  {
     href: "/roi-calculator",
     icon: "📈",
     title: "AI Initiative ROI Calculator",
@@ -57,7 +77,7 @@ export default function Home() {
             <span className="text-blue-400">financial analysis</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-xl mx-auto">
-            Three purpose-built tools that turn documents, data, and decisions
+            Five purpose-built tools that turn financial documents, risk signals, and data
             into actionable intelligence — in seconds.
           </p>
         </section>

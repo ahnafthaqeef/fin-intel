@@ -7,6 +7,8 @@ const tools = [
   { href: "/statement-analyzer", label: "Statement Analyzer" },
   { href: "/doc-qa", label: "Doc Q&A" },
   { href: "/roi-calculator", label: "ROI Calculator" },
+  { href: "/credit-explainer", label: "Credit Explainer" },
+  { href: "/fraud-brief", label: "Fraud Brief" },
 ];
 
 export default function Nav() {
