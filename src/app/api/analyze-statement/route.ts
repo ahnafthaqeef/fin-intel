@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { PDFParse } from "pdf-parse";
-import { groq, MODEL } from "@/lib/groq";
+import { getGroq, MODEL } from "@/lib/groq";
 
 const SYSTEM_PROMPT = `You are a financial analyst AI. Analyze the bank statement text provided and return a JSON object with this exact structure:
 {
@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const completion = await groq.chat.completions.create({
+    const completion = await getGroq().chat.completions.create({
       model: MODEL,
       messages: [
         { role: "system", content: SYSTEM_PROMPT },

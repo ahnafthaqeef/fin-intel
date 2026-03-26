@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server";
-import { groq, MODEL } from "@/lib/groq";
+import { getGroq, MODEL } from "@/lib/groq";
 
 function findRelevantChunks(
   chunks: string[],
@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
     const relevant = findRelevantChunks(chunks, question);
     const context = relevant.join("\n\n---\n\n");
 
-    const completion = await groq.chat.completions.create({
+    const completion = await getGroq().chat.completions.create({
       model: MODEL,
       messages: [
         {
